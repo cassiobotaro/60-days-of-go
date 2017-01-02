@@ -4,3 +4,7 @@
 Heavily inspired by [Going.go](https://goinggo.io/) of my friend @joaoh82.
 
 Personal challenge to post every day one note about go.
+
+| Day | Title      |
+| --- |:----------:|
+| 001 | [Hello World](day01/hello_world.go)|
