@@ -1,7 +1,7 @@
 // Every program should have a main package
 package main
 
-//fmt is a package to communicate with the standard io. Pronounce is "fumpt"
+// fmt package implements formatted I/O with functions analogous to C's printf and scanf. Pronounce is "fumpt"
 import "fmt"
 
 // Every program should have a main function too, and will be the first executed function.
