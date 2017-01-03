@@ -8,3 +8,4 @@ Personal challenge to post every day a note about go.
 | Day | Title      |
 | --- |:----------:|
 | 001 | [Hello World](day01/hello_world.go)|
+| 002 | [FizzBuzz](day02/)|
