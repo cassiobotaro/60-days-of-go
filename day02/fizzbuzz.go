@@ -17,11 +17,11 @@ func FizzBuzz(cnt chan int, msg chan string) {
 		i := <-cnt
 		switch {
 		case i%15 == 0:
-			msg <- fmt.Sprintf("FizzBuzz")
+			msg <- "FizzBuzz"
 		case i%3 == 0:
-			msg <- fmt.Sprintf("Fizz")
+			msg <- "Fizz"
 		case i%5 == 0:
-			msg <- fmt.Sprintf("Buzz")
+			msg <- "Buzz"
 		default:
 			msg <- fmt.Sprintf("%d", i)
 		}
