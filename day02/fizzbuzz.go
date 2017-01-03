@@ -39,7 +39,6 @@ func main() {
 	go FizzBuzz(count, message)
 	for i := 1; i < 101; i++ {
 		count <- i
-		s := <-message
-		fmt.Println(s)
+		fmt.Println(<-message)
 	}
 }
