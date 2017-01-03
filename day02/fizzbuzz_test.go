@@ -3,7 +3,6 @@ package main
 import "testing"
 
 // Example of how to make tests using table design.
-
 func TestFizz(t *testing.T) {
 	// test numbers that are divible by three only.
 	// table with input and the expected results.
@@ -15,9 +14,14 @@ func TestFizz(t *testing.T) {
 		{6, "Fizz"},
 		{9, "Fizz"},
 	}
+	// Make channel const
+	count := make(chan int)
+	message := make(chan string)
 	// iterate over the table and test if obtained is equals to the expected value
+	go FizzBuzz(count, message)
 	for _, data := range table {
-		if actual := FizzBuzz(data.Input); actual != data.Expected {
+		count <- data.Input
+		if actual := <-message; actual != data.Expected {
 			// error will handled if something goes wrong.
 			t.Errorf("expected %q but %q was obtained", data.Expected, actual)
 		}
@@ -34,8 +38,13 @@ func TestBuzz(t *testing.T) {
 		{10, "Buzz"},
 		{20, "Buzz"},
 	}
+	// Make channel const
+	count := make(chan int)
+	message := make(chan string)
+	go FizzBuzz(count, message)
 	for _, data := range table {
-		if actual := FizzBuzz(data.Input); actual != data.Expected {
+		count <- data.Input
+		if actual := <-message; actual != data.Expected {
 			t.Errorf("expected %q but %q was obtained", data.Expected, actual)
 		}
 	}
@@ -51,8 +60,13 @@ func TestFizzBuzz(t *testing.T) {
 		{30, "FizzBuzz"},
 		{60, "FizzBuzz"},
 	}
+	// Make channel const
+	count := make(chan int)
+	message := make(chan string)
+	go FizzBuzz(count, message)
 	for _, data := range table {
-		if actual := FizzBuzz(data.Input); actual != data.Expected {
+		count <- data.Input
+		if actual := <-message; actual != data.Expected {
 			t.Errorf("expected %q but %q was obtained", data.Expected, actual)
 		}
 	}
@@ -68,8 +82,13 @@ func TestNumbers(t *testing.T) {
 		{2, "2"},
 		{4, "4"},
 	}
+	// Make channel const
+	count := make(chan int)
+	message := make(chan string)
+	go FizzBuzz(count, message)
 	for _, data := range table {
-		if actual := FizzBuzz(data.Input); actual != data.Expected {
+		count <- data.Input
+		if actual := <-message; actual != data.Expected {
 			t.Errorf("expected %q but %q was obtained", data.Expected, actual)
 		}
 	}
