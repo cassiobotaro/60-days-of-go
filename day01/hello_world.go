@@ -6,6 +6,6 @@ import "fmt"
 
 // Every program should have a main function too, and will be the first executed function.
 func main() {
-	// Println print "Hello World!!" on the standard output and also break a line.
+	// Println prints "Hello World!!" on the standard output and also break a line.
 	fmt.Println("Hello World!!")
 }
