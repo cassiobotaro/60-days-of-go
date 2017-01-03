@@ -15,14 +15,18 @@ Numbers divisible by 3 and 5 should appear as' FizzBuzz 'instead of number'.
 func FizzBuzz(cnt chan int, msg chan string) {
 	for {
 		i := <-cnt
+		// switch with no condition
+		// case determines the flow
 		switch {
 		case i%15 == 0:
 			msg <- "FizzBuzz"
+		// break is not necessary.
 		case i%3 == 0:
 			msg <- "Fizz"
 		case i%5 == 0:
 			msg <- "Buzz"
 		default:
+			// convert an integer into string
 			msg <- fmt.Sprintf("%d", i)
 		}
 	}
