@@ -9,4 +9,5 @@ Personal challenge to post every day a note about go.
 | --- |:----------:|
 | 001 | [Hello World](day01/hello_world.go)|
 | 002 | [FizzBuzz](day02/)|
-| 003 | [Fibonacci](day03/fibonacci.go)|
+| 003 | [Fibonacci](day03/)|
+| 004 | [Closures](day04/)|
