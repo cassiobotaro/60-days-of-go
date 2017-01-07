@@ -10,6 +10,8 @@ import (
 
 // An interesting link is https://mholt.github.io/json-to-go/
 // https://pokeapi.co/ return  mapped into a struct
+
+// Pokemon ...
 type Pokemon struct {
 	Forms []struct {
 		URL  string `json:"url"`

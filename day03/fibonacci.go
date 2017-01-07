@@ -16,7 +16,7 @@ for x in fib(10):
 # Iterate fib sequence is easy, but next calls and try/exception can be confuse.
 */
 
-// Func generates fibonacci sequence for n numbers
+// Fib generates fibonacci sequence for n numbers
 func Fib(n int) chan int {
 	// Create a channel
 	c := make(chan int)

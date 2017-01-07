@@ -7,7 +7,8 @@ import (
 	"net/url"
 )
 
-func JsonRequest(url string, structure interface{}) (err error) {
+// JSONRequest do a http request with json content-type
+func JSONRequest(url string, structure interface{}) (err error) {
 	// initialize a http client
 	client := &http.Client{}
 
@@ -41,12 +42,12 @@ func main() {
 	// map json response into struct
 	s := struct {
 		Origin  string            `json:"origin"`
-		Url     string            `json:"url"`
+		URL     string            `json:"url"`
 		Args    map[string]string `json:"args"`
 		Headers map[string]string `json:"headers"`
 	}{}
 	// Call JsonRequest and verify raised error
-	switch err := JsonRequest("http://httpbin.org/get", &s).(type) {
+	switch err := JSONRequest("http://httpbin.org/get", &s).(type) {
 	// no errors, print Origin(your ip)
 	case nil:
 		fmt.Printf("Origin: %s\n", s.Origin)

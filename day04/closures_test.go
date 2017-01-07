@@ -9,7 +9,7 @@ func TestSequence(t *testing.T) {
 	for i := 1; i < 10; i++ {
 		// call nextInt n times
 		if n := nextInt(); n != i {
-			t.Errorf("expected %d but %d was obtained", i, v)
+			t.Errorf("expected %d but %d was obtained", i, n)
 		}
 	}
 }
