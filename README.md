@@ -13,3 +13,4 @@ Personal challenge to post every day a note about go.
 | 004 | [Closures](day04/)|
 | 005 | [Error Handling](day05/)|
 | 006 | [Pokedex](day06/)|
+| 007 | [Strategy pt.I](day07/)|
