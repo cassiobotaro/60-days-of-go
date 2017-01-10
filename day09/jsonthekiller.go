@@ -18,11 +18,11 @@ type Person struct {
 
 func main() {
 	// consider some json
-	someJson := `{"name": "Cássio", "age": 26}`
+	someJSON := `{"name": "Cássio", "age": 26}`
 	// person is the mapped structure of the json
 	pu := Person{}
 	// using the unmarshal we decode a json into a struct
-	err := json.Unmarshal([]byte(someJson), &pu)
+	err := json.Unmarshal([]byte(someJSON), &pu)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -31,7 +31,7 @@ func main() {
 	pd := Person{}
 	// Is the same as Unmarshal, but have the advantage to receive
 	// io.Reader(can be a file, or something else that have Read method) interface as decoder
-	err = json.NewDecoder(strings.NewReader(someJson)).Decode(&pd)
+	err = json.NewDecoder(strings.NewReader(someJSON)).Decode(&pd)
 	if err != nil {
 		log.Fatal(err)
 	}
