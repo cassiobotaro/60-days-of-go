@@ -61,26 +61,31 @@ func (k Killer) Kill() {
 	fmt.Println("I kill you!")
 }
 
+// Dog is a barker that poop
 type Dog struct {
 	Barker
 	Pooper
 }
 
+// Cat is meower that poop
 type Cat struct {
 	Meower
 	Pooper
 }
 
+// Cleaningrobot is a driver that clean
 type CleaningRobot struct {
 	Driver
 	Cleaner
 }
 
+// MuderRobot is a driver that kill
 type MurderRobot struct {
 	Driver
 	Killer
 }
 
+// WAT?
 type MurderRobotDog struct {
 	MurderRobot
 	Barker
