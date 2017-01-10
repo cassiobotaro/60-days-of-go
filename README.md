@@ -15,3 +15,4 @@ Personal challenge to post every day a note about go.
 | 006 | [Pokedex](day06/)|
 | 007 | [Strategy pt.I](day07/)|
 | 008 | [Strategy pt.II](day08/)|
+| 009 | [JSON the killer](day09/)|
