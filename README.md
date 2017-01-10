@@ -16,3 +16,4 @@ Personal challenge to post every day a note about go.
 | 007 | [Strategy pt.I](day07/)|
 | 008 | [Strategy pt.II](day08/)|
 | 009 | [JSON the killer](day09/)|
+| 010 | [Murder Robot Dog](day10/)|
