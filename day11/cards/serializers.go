@@ -1,11 +1,11 @@
-package card
+package cards
 
 import (
 	"fmt"
 	"strings"
 )
 
-// CardSerializer is a card in todo list
+// CardSerializer is card serializer
 type CardSerializer struct {
 	Card
 	errors []string // for while an array of strings `json:"errors"`

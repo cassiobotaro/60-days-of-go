@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/cassiobotaro/60-days-of-go/day11/card"
+	"github.com/cassiobotaro/60-days-of-go/day11/cards"
 	"github.com/gorilla/mux"
 	"github.com/urfave/negroni"
 )
@@ -20,7 +20,7 @@ import (
 // controllers by package
 
 func createCard(w http.ResponseWriter, r *http.Request) {
-	card := card.CardSerializer{}
+	card := cards.CardSerializer{}
 	err := json.NewDecoder(r.Body).Decode(&card)
 	defer r.Body.Close()
 	if err != nil {
