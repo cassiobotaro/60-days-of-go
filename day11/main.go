@@ -29,11 +29,11 @@ func createCard(w http.ResponseWriter, r *http.Request) {
 	if card.Validate() {
 		// not implemented yet
 		card.Save()
-		// STATUS 201
-		w.WriteHeader(http.StatusCreated)
 		// set content type as json
 		// maybe in future it will turned into a middleware
-		w.Header().Set("Content-Type", "application/json")
+		w.Header().Set("Content-Type", "application/json; charset=utf-8")
+		// STATUS 201
+		w.WriteHeader(http.StatusCreated)
 		// returns card as a json
 		err = json.NewEncoder(w).Encode(card)
 		if err != nil {
