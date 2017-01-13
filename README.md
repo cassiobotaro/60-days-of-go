@@ -19,3 +19,4 @@ Personal challenge to post every day a note about go.
 | 010 | [Murder Robot Dog](day10/)|
 | 011 | [TODO API pt.I](day11/)|
 | 012 | [TODO API pt.II](day12/)|
+| 013 | [TODO API pt.III](day13/)|

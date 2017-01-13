@@ -1,0 +1,31 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "dPI35hOM4TMrLugm6M1js14jHVQ=",
+			"path": "github.com/asaskevich/govalidator",
+			"revision": "fdf19785fd3558d619ef81212f5edf1d6c2a5911",
+			"revisionTime": "2017-01-04T21:11:26Z"
+		},
+		{
+			"checksumSHA1": "g/V4qrXjUGG9B+e3hB+4NAYJ5Gs=",
+			"path": "github.com/gorilla/context",
+			"revision": "08b5f424b9271eedf6f9f0ce86cb9396ed337a42",
+			"revisionTime": "2016-08-17T18:46:32Z"
+		},
+		{
+			"checksumSHA1": "urMd7A9QPAJYY0GZJL9qBhlUmD8=",
+			"path": "github.com/gorilla/mux",
+			"revision": "757bef944d0f21880861c2dd9c871ca543023cba",
+			"revisionTime": "2016-09-20T23:08:13Z"
+		},
+		{
+			"checksumSHA1": "fLHhwOFw6MNxchywNMfry5VcYrU=",
+			"path": "github.com/urfave/negroni",
+			"revision": "46eece4d3b43dd330e141b20adf0ce9b2b35ba53",
+			"revisionTime": "2017-01-05T05:21:13Z"
+		}
+	],
+	"rootPath": "github.com/cassiobotaro/60-days-of-go/day13"
+}
