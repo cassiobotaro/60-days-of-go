@@ -1,0 +1,35 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "hmjY4MUlyj/kx/zw+R1iSu3FTlo=",
+			"path": "github.com/jmoiron/sqlx",
+			"revision": "cac998c4f0959c19c638c523e374fa8e4e0bcfe3",
+			"revisionTime": "2016-12-09T02:45:31Z"
+		},
+		{
+			"checksumSHA1": "NrhkMPKlj0N6LaD2JMb2KKnR03w=",
+			"path": "github.com/jmoiron/sqlx/reflectx",
+			"revision": "cac998c4f0959c19c638c523e374fa8e4e0bcfe3",
+			"revisionTime": "2016-12-09T02:45:31Z"
+		},
+		{
+			"checksumSHA1": "0LV0M9I9ppPvSTrLBQS1iV5NEFw=",
+			"path": "github.com/mattn/go-sqlite3",
+			"revision": "eff6379ba09b2fca7aa8216f2132d4c170ed9d46",
+			"revisionTime": "2017-01-10T16:29:59Z"
+		},
+		{
+			"path": "go",
+			"revision": ""
+		},
+		{
+			"checksumSHA1": "9jjO5GjLa0XF/nfWihF02RoH4qc=",
+			"path": "golang.org/x/net/context",
+			"revision": "f2499483f923065a842d38eb4c7f1927e6fc6e6d",
+			"revisionTime": "2017-01-14T04:22:49Z"
+		}
+	],
+	"rootPath": "github.com/cassiobotaro/60-days-of-go/day15"
+}
