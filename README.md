@@ -22,3 +22,4 @@ Personal challenge to post every day a note about go.
 | 013 | [TODO API pt.III](day13/)|
 | 014 | [Decorators](day14/)|
 | 015 | [Singleton](day15/)|
+| 016 | [CSV](day16/)|
