@@ -8,7 +8,7 @@ import (
 func main() {
 	// multiple conditionals
 	// option only exists inside the switch
-	switch option := 1;option {
+	switch option := 1; option {
 	// case 1 or 4
 	case 1, 4:
 		fmt.Println("option 1 or 4")
