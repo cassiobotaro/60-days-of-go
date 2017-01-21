@@ -26,4 +26,5 @@ Personal challenge to post every day a note about go.
 | 017 | [Benchmark](day17/)|
 | 018 | [Starter pt.I - IF statement](day18/)|
 | 019 | [Starter pt.II - Switch statement](day19/)|
-| 020 | [Starter pt.III - Arrays](day20/)|
+| 020 | [Starter pt.III - Loops](day20/)|
+| 021 | [Starter pt.IV - Arrays](day21/)|
