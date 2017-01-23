@@ -46,7 +46,7 @@ func main() {
 		fmt.Println(n)
 	}
 
-	// for each element -  array
+	// for each element -  arrays
 	// NOTE: range always returns two elements
 	for index, value := range [4]string{"apple", "banana", "orange", "lemon"} {
 		fmt.Printf("indice: %d value: %q\n", index, value)

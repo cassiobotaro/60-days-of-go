@@ -28,3 +28,4 @@ Personal challenge to post every day a note about go.
 | 019 | [Starter pt.II - Switch statement](day19/)|
 | 020 | [Starter pt.III - Loops](day20/)|
 | 021 | [Starter pt.IV - Arrays](day21/)|
+| 022 | [Starter pt.V - Slices](day22/)|
