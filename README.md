@@ -30,3 +30,4 @@ Personal challenge to post every day a note about go.
 | 021 | [Starter pt.IV - Arrays](day21/)|
 | 022 | [Starter pt.V - Slices](day22/)|
 | 023 | [Starter pt.VI - Maps](day23/)|
+| 024 | [Starter pt.VII - Functions](day24/)|
