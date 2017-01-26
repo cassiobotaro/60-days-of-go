@@ -32,3 +32,4 @@ Personal challenge to post every day a note about go.
 | 023 | [Starter pt.VI - Maps](day23/)|
 | 024 | [Starter pt.VII - Functions](day24/)|
 | 025 | [Starter pt.VIII - Pointers](day25/)|
+| 026 | [Starter pt. IX - Structs](day26/)|
