@@ -5,22 +5,9 @@ import (
 	"log"
 
 	"golang.org/x/crypto/ssh"
-	"golang.org/x/oauth2"
 )
 
-// variable representing your token at digital ocean
-var pat = "past here your token"
-
-type TokenSource struct {
-	AccessToken string
-}
-
-func (t *TokenSource) Token() (*oauth2.Token, error) {
-	token := &oauth2.Token{
-		AccessToken: t.AccessToken,
-	}
-	return token, nil
-}
+// PublicKeyFile returns an AuthMethod with your public key
 func PublicKeyFile(file string) ssh.AuthMethod {
 	buffer, err := ioutil.ReadFile(file)
 	if err != nil {
@@ -37,9 +24,8 @@ func PublicKeyFile(file string) ssh.AuthMethod {
 }
 
 func main() {
-	// Create an droplet
 	// copy ip and paste below
-	// don't forget to change pat variable and set your ssh key in the machine
+	// don't forget to set your ssh key in the machine
 	sshConfig := &ssh.ClientConfig{
 		User: "root",
 		Auth: []ssh.AuthMethod{
