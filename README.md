@@ -34,3 +34,5 @@ Personal challenge to post every day a note about go.
 | 025 | [Starter pt.VIII - Pointers](day25/)|
 | 026 | [Starter pt. IX - Structs](day26/)|
 | 027 | [SSH](day27/)|
+
+Today(January, 28), I will not post because I going drink with old friends. Tomorrow I push day 28 and 29.
