@@ -36,5 +36,6 @@ Personal challenge to post every day a note about go.
 | 027 | [SSH](day27/)|
 | 028 | [Don't panic](day28/)|
 | 029 | [Probe Connection](day29/)|
+| 030 | [Inception](day30/)|
 
 Today(January, 28), I will not post because I going drink with old friends. Tomorrow I push day 28 and 29.
