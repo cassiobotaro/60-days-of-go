@@ -39,3 +39,4 @@ Personal challenge to post every day a note about go.
 | 030 | [Inception](day30/)|
 | 031 | [Diving in the ocean](day31/)
 | 032 | [Attach](day32/)
+| 033 | [Interfaces](day33/)
