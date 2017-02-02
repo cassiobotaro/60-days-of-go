@@ -38,3 +38,4 @@ Personal challenge to post every day a note about go.
 | 029 | [Probe Connection](day29/)|
 | 030 | [Inception](day30/)|
 | 031 | [Diving in the ocean](day31/)
+| 032 | [Attach](day32/)
