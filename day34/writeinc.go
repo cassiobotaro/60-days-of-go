@@ -2,6 +2,10 @@ package main
 
 /*
 #include "mystring.h"
+
+int sum(int a, int b){
+	return a + b;
+}
 */
 import "C"
 import (
@@ -10,6 +14,8 @@ import (
 )
 
 func main() {
+	// sum two integers
+	fmt.Println("sum(2, 3)", C.sum(2, 3))
 	// CString wil return a *C.char
 	// it's equivalent to char* in C
 	original := C.CString("test")
