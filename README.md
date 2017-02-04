@@ -40,3 +40,4 @@ Personal challenge to post every day a note about go.
 | 031 | [Diving in the ocean](day31/)
 | 032 | [Attach](day32/)
 | 033 | [Interfaces](day33/)
+| 034 | [Write in C](day34/)
