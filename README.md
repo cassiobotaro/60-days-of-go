@@ -42,3 +42,5 @@ Personal challenge to post every day a note about go.
 | 033 | [Interfaces](day33/)
 | 034 | [Write in C](day34/)
 | 035 | [Goroutines](day34/)
+
+05/02 - NFL LI - tomorrow day 36 and 37.
