@@ -1,9 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#define TRUE 1
-#define FALSE 0
-#define NOTFOUND -1
+typedef enum {notfound = -1, false, true} bool;
 
 int length(char *str){
     int i=0;
@@ -22,7 +20,7 @@ int firstIndexOf(char *str, char c){
         indice++;
         str++;
     }
-    return NOTFOUND;
+    return notfound;
 }
 
 int lastIndexOf(char *str, char c){
@@ -33,21 +31,21 @@ int lastIndexOf(char *str, char c){
             return i -1;
         }
     }
-    return NOTFOUND;
+    return notfound;
 }
 
 int equals(char *str1, char *str2){
     int tamanho_str1 = length(str1);
     int tamanho_str2 = length(str2);
     if (tamanho_str1 != tamanho_str2) {
-        return FALSE;
+        return false;
     }
     while(*str1++!='\0' && *str2++!='\0'){
         if (*str1 != *str2) {
-            return FALSE;
+            return false;
         }
     }
-    return TRUE;
+    return true;
 }
 
 char toLower(char c){
@@ -75,16 +73,16 @@ void toLowerCase(char *str){
 
 int equalsIgnoreCase(char *str1, char *str2){
     if (length(str1) != length(str2)){
-        return FALSE;
+        return false;
     }
     while(*str1 != '\0'){
         if (toLower(*str1) != toLower(*str2)){
-            return FALSE;
+            return false;
         }
         str1++;
         str2++;
     }
-    return TRUE;
+    return true;
 }
 
 void substring(char *str, char *sub, int ini, int end){
