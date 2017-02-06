@@ -43,3 +43,6 @@ Personal challenge to post every day a note about go.
 | 034 | [Write in C](day34/)
 | 035 | [Goroutines](day35/)
 | 036 | [Channels](day36/)
+| 037 | [Select](day37/)
+
+
