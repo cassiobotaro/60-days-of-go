@@ -41,4 +41,5 @@ Personal challenge to post every day a note about go.
 | 032 | [Attach](day32/)
 | 033 | [Interfaces](day33/)
 | 034 | [Write in C](day34/)
-| 035 | [Goroutines](day34/)
+| 035 | [Goroutines](day35/)
+| 036 | [Channels](day36/)
