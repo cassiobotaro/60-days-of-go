@@ -4,9 +4,26 @@ import (
 	"errors"
 	"fmt"
 	"log"
+	"time"
 )
 
 func main() {
+
+	// timeout using select
+	ch := make(chan string)
+	go func() {
+		time.Sleep(time.Second * 2)
+		ch <- "never happen"
+	}()
+
+	// wait for ch returns or 1 second
+	select {
+	case res := <-ch:
+		fmt.Println(res)
+	case <-time.After(time.Second * 1):
+		fmt.Println("timeout occurs")
+	}
+
 	// three channels
 	// one for numbers, one for errors and one to indicate that computation are done
 	done := make(chan bool)
