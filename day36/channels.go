@@ -16,7 +16,6 @@ func SomeComputation(done chan bool) {
 	fmt.Println("done")
 	// send done and close channel
 	done <- true
-	close(done)
 }
 
 // Hello receive some string through input channel, concatenate with "Hello " and returns
@@ -26,7 +25,6 @@ func Hello(input <-chan string, output chan<- string) {
 	received := <-input
 	received = "Hello " + received
 	output <- received
-	close(output)
 }
 
 // Echo returns what receive through two way channel
@@ -45,7 +43,6 @@ func main() {
 		m <- "some message"
 	}(message)
 	fmt.Println(<-message)
-	close(message)
 
 	// buffered channels are like convetional, but can store
 	// more values until you request the next
@@ -54,7 +51,6 @@ func main() {
 	msgs <- "channel"
 	fmt.Println(<-msgs)
 	fmt.Println(<-msgs)
-	close(msgs)
 
 	done := make(chan bool)
 	go SomeComputation(done)
@@ -63,7 +59,6 @@ func main() {
 
 	// send from "in" channel and receive from "out"
 	in := make(chan string)
-	defer close(in)
 	out := make(chan string)
 	go Hello(in, out)
 	in <- "John"
@@ -72,7 +67,6 @@ func main() {
 	// for default channels are two way
 	// we can send and receive data
 	echoChan := make(chan string)
-	defer close(echoChan)
 	go Echo(echoChan)
 	echoChan <- "Ping"
 	fmt.Println(<-echoChan)
