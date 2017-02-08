@@ -45,3 +45,4 @@ Personal challenge to post every day a note about go.
 | 036 | [Channels](day36/)
 | 037 | [Select](day37/)
 | 038 | [More channels](day38/)
+| 039 | [Alarm](day39/)
