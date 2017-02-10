@@ -47,3 +47,4 @@ Personal challenge to post every day a note about go.
 | 038 | [More channels](day38/)
 | 039 | [Alarm](day39/)
 | 040 | [Task Queue](day40/)
+| 041 | [Type Assertion](day41/)
