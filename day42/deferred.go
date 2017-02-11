@@ -28,6 +28,9 @@ type HTTPBin struct {
 }
 
 func main() {
+	// interesting link about "What could happen if I don't close response.Body in golang?"
+	// http://stackoverflow.com/questions/33238518/what-could-happen-if-i-dont-close-response-body-in-golang
+	// the same is applied with files
 	// Create a file at tmp directory
 	f, err := os.Create("/tmp/dat2")
 	if err != nil {
