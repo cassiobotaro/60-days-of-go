@@ -57,6 +57,7 @@ func main() {
 	fmt.Printf("bodyMap.URL = %+v\n", bodyMap.URL)
 
 	// Is like a Stack, Last in, First out
+	defer fmt.Println("4")
 	defer fmt.Println("3")
 	defer fmt.Println("2")
 	defer fmt.Println("1")
