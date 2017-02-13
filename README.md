@@ -50,3 +50,4 @@ Personal challenge to post every day a note about go.
 | 041 | [Type Assertion](day41/)
 | 042 | [Defer](day42/)
 | 043 | [Strings](day43/)
+| 044 | [Regex](day44/)
