@@ -49,3 +49,4 @@ Personal challenge to post every day a note about go.
 | 040 | [Task Queue](day40/)
 | 041 | [Type Assertion](day41/)
 | 042 | [Defer](day42/)
+Today 12/02/2017 i will not post code, because I'm travelling.Tomorrow I post 2days :beer:
