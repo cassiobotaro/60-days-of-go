@@ -51,4 +51,4 @@ Personal challenge to post every day a note about go.
 | 042 | [Defer](day42/)
 | 043 | [Strings](day43/)
 | 044 | [Regex](day44/)
-I'm without internet :disappointed_relieved: Day 45 is about package testing, i will try to post later.
+| 045 | [Quick Test](day45/)
