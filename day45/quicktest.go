@@ -1,5 +1,7 @@
 package main
 
+// Run: go test -v
+
 // IsOdd is a function to test if a number is odd
 func IsOdd(number int) bool {
 	return number%2 != 0
