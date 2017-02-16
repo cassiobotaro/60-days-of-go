@@ -52,3 +52,4 @@ Personal challenge to post every day a note about go.
 | 043 | [Strings](day43/)
 | 044 | [Regex](day44/)
 | 045 | [Quick Test](day45/)
+| 046 | [Debug](day46/)
