@@ -54,3 +54,4 @@ Personal challenge to post every day a note about go.
 | 045 | [Quick Test](day45/)
 | 046 | [Debug - Delve](day46/)
 | 047 | [Debug - GDB](day47/)
+| 048 | [Go Docker](day48/)
