@@ -56,3 +56,4 @@ Personal challenge to post every day a note about go.
 | 047 | [Debug - GDB](day47/)
 | 048 | [Go Docker](day48/)
 | 049 | [sap - Show of the band "Matanza"]
+| 050 | [Oh now!My brothers call me to drink today!]
