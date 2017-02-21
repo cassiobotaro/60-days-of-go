@@ -55,4 +55,4 @@ Personal challenge to post every day a note about go.
 | 046 | [Debug - Delve](day46/)
 | 047 | [Debug - GDB](day47/)
 | 048 | [Go Docker](day48/)
-| 049 | [black screen of death](day49/)
+| 049 | [Black screen of death](day49/)
