@@ -56,3 +56,4 @@ Personal challenge to post every day a note about go.
 | 047 | [Debug - GDB](day47/)
 | 048 | [Go Docker](day48/)
 | 049 | [black screen of death](day49/)
+| 050 | [Singleton](day50/)
