@@ -61,4 +61,8 @@ func main() {
 		log.Fatal(err)
 	}
 	fmt.Println("Successfully connected ✓")
+	err = conn.Close()
+	if err != nil {
+		log.Fatal(err)
+	}
 }
