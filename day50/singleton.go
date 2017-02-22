@@ -28,7 +28,7 @@ var (
 // export PGHOST=localhost
 // export PGPORT=5432
 // Run postgresql inside a container
-// docker run -d postgresql:latest
+// docker run -d -p 5432:5432 postgres:latest
 
 // MustGetConnection returns database connection
 func MustGetConnection() *sqlx.DB {
