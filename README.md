@@ -57,3 +57,4 @@ Personal challenge to post every day a note about go.
 | 048 | [Go Docker](day48/)
 | 049 | [black screen of death](day49/)
 | 050 | [Singleton](day50/)
+| 051 | [Dr. Strange](day51/)
