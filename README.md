@@ -58,3 +58,4 @@ Personal challenge to post every day a note about go.
 | 049 | [black screen of death](day49/)
 | 050 | [Singleton](day50/)
 | 051 | [Dr. Strange](day51/)
+| 052 | [Mutex](day52/)
