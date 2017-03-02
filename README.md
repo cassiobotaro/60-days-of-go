@@ -59,3 +59,4 @@ Personal challenge to post every day a note about go.
 | 050 | [Singleton](day50/)
 | 051 | [Dr. Strange](day51/)
 | 052 | [Mutex](day52/)
+| 053 | [gofn](day53/)
