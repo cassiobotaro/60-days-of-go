@@ -61,3 +61,4 @@ Personal challenge to post every day a note about go.
 | 052 | [Mutex](day52/)
 | 053 | [gofn](day53/)
 | 054 | [String Theory](day54/)
+| 055 | [Sort](day55/)
