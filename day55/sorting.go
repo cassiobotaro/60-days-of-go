@@ -76,5 +76,9 @@ func main() {
 	// sorting persons by name length
 	sort.Sort(ByNameLength(people))
 	fmt.Println(people)
+	// Interesting links
+	// - https://gobyexample.com/sorting
+	// - https://gobyexample.com/sorting-by-functions
+	// - https://golang.org/pkg/sort/
 
 }
