@@ -62,3 +62,4 @@ Personal challenge to post every day a note about go.
 | 053 | [gofn](day53/)
 | 054 | [String Theory](day54/)
 | 055 | [Sort](day55/)
+| 056 | [Path](day56/)
