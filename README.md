@@ -63,3 +63,4 @@ Personal challenge to post every day a note about go.
 | 054 | [String Theory](day54/)
 | 055 | [Sort](day55/)
 | 056 | [Path](day56/)
+| 057 | [Setup and Teardown](day57/)
