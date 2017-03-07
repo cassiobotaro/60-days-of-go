@@ -64,3 +64,4 @@ Personal challenge to post every day a note about go.
 | 055 | [Sort](day55/)
 | 056 | [Path](day56/)
 | 057 | [Setup and Teardown](day57/)
+| 058 | [Context](day58/)
