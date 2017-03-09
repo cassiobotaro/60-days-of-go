@@ -66,3 +66,4 @@ Personal challenge to post every day a note about go.
 | 057 | [Setup and Teardown](day57/)
 | 058 | [Context](day58/)
 | 059 | [Templates](day59/)
+| 060 | [Awesome!](day60/)
