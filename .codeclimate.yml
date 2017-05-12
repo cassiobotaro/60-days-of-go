@@ -1,3 +1,17 @@
+engines:
+  fixme:
+    enabled: true
+    exclude_paths:
+      - README.md
+  govet:
+    enabled: true
+  gofmt:
+    enabled: true
+  golint:
+    enabled: true
+ratings:
+  paths:
+  - "**.go"
+  - "**.md"
 exclude_paths:
-  - "README.md"
-  - "**/README.md"
+  - "**/vendor/**"
