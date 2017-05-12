@@ -8,6 +8,7 @@ type CardSerializer struct {
 	Errors map[string][]string `json:"-"`
 }
 
+// NewCardSerializer is the initializer of a card serializer
 func NewCardSerializer() *CardSerializer {
 	return &CardSerializer{Errors: make(map[string][]string)}
 }

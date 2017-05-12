@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/cassiobotaro/60-days-of-go/day11/cards"
+	"github.com/cassiobotaro/60-days-of-go/day12/cards"
 	"github.com/gorilla/mux"
 	"github.com/urfave/negroni"
 )
@@ -16,8 +16,8 @@ import (
 // - tests
 // controllers by package
 
-// RenderJson render a content as json(thinking about middleware)
-func RenderJson(w http.ResponseWriter, content interface{}, statusCode int) {
+// RenderJSON render a content as json(thinking about middleware)
+func RenderJSON(w http.ResponseWriter, content interface{}, statusCode int) {
 	// Set Content-Type as json
 	w.Header().Set("Content-Type", "application/json; charset=utf-8")
 	// HTTP STATUS CODE
@@ -33,16 +33,16 @@ func createCard(w http.ResponseWriter, r *http.Request) {
 	err := json.NewDecoder(r.Body).Decode(&card)
 	defer r.Body.Close()
 	if err != nil {
-		RenderJson(w, map[string]string{"errors": err.Error()}, http.StatusInternalServerError)
+		RenderJSON(w, map[string]string{"errors": err.Error()}, http.StatusInternalServerError)
 		return
 	}
 	if card.Validate() {
 		// not implemented yet
 		card.Save()
-		RenderJson(w, card, http.StatusCreated)
+		RenderJSON(w, card, http.StatusCreated)
 	} else {
 		// STATUS 401 - BAD REQUEST
-		RenderJson(w, card.Errors, http.StatusBadRequest)
+		RenderJSON(w, card.Errors, http.StatusBadRequest)
 	}
 }
 
@@ -53,7 +53,7 @@ func main() {
 	n := negroni.Classic() // Includes some default middlewares
 	n.UseHandler(r)
 
-	baseUrl := "localhost:3000"
-	log.Printf("Server running at: http://%s", baseUrl)
-	log.Fatal(http.ListenAndServe(baseUrl, n))
+	baseURL := "localhost:3000"
+	log.Printf("Server running at: http://%s", baseURL)
+	log.Fatal(http.ListenAndServe(baseURL, n))
 }

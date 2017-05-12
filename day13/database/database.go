@@ -7,7 +7,7 @@ import (
 )
 
 var (
-	// ErrCardNotfound raised when a card is not found
+	// ErrCardNotFound raised when a card is not found
 	ErrCardNotFound = errors.New("card not found")
 )
 

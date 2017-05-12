@@ -8,13 +8,13 @@ import "fmt"
 // this encapsulation is valid on the whole package(further discussions)
 // We talk more about POO in another day.
 
-// A Customer is a simple struct wiht name and fidelity points
+// Customer is a simple struct wiht name and fidelity points
 type Customer struct {
 	name     string
 	fidelity int
 }
 
-// A LineItem represents a item in a cart
+// LineItem represents a item in a cart
 type LineItem struct {
 	product  string
 	quantity int
@@ -63,7 +63,7 @@ func (order Order) String() string {
 	return fmt.Sprintf("<Order total: %.2f due: %.2f>", order.Total(), order.Due())
 }
 
-// Function that receives an order and return a discount
+// FidelityPromo receives an order and return a discount
 func FidelityPromo(o Order) float64 {
 	if o.ctm.fidelity >= 1000 {
 		return o.Total() * 0.05
@@ -71,7 +71,7 @@ func FidelityPromo(o Order) float64 {
 	return 0.0
 }
 
-// Function that receives an order and return a discount
+// BulkItemPromo receives an order and return a discount
 func BulkItemPromo(o Order) float64 {
 	discount := 0.0
 	for _, item := range o.cart {
@@ -82,7 +82,7 @@ func BulkItemPromo(o Order) float64 {
 	return discount
 }
 
-// Function that receives an order and return a discount
+// LargeOrderPromo receives an order and return a discount
 func LargeOrderPromo(o Order) float64 {
 	set := map[string]bool{}
 	for _, item := range o.cart {

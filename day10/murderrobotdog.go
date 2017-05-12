@@ -73,19 +73,19 @@ type Cat struct {
 	Pooper
 }
 
-// Cleaningrobot is a driver that clean
+// CleaningRobot is a driver that clean
 type CleaningRobot struct {
 	Driver
 	Cleaner
 }
 
-// MuderRobot is a driver that kill
+// MurderRobot is a driver that kill
 type MurderRobot struct {
 	Driver
 	Killer
 }
 
-// WAT?
+// MurderRobotDog WAT?
 type MurderRobotDog struct {
 	MurderRobot
 	Barker

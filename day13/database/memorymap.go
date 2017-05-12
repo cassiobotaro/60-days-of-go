@@ -2,16 +2,19 @@ package database
 
 import "github.com/cassiobotaro/60-days-of-go/day13/cards"
 
-type memoryDB struct {
+// MemoryDB is a database mapped in memory
+type MemoryDB struct {
 	cardList []*cards.Card
 	index    int64
 }
 
-func NewMemoryDB() *memoryDB {
-	return &memoryDB{cardList: []*cards.Card{}}
+// NewMemoryDB initializes an empty memory database
+func NewMemoryDB() *MemoryDB {
+	return &MemoryDB{cardList: []*cards.Card{}}
 }
 
-func (m *memoryDB) CreateCard(card *cards.Card) error {
+// CreateCard appends a card into array
+func (m *MemoryDB) CreateCard(card *cards.Card) error {
 	// new id
 	m.index++
 	card.ID = m.index
@@ -19,11 +22,13 @@ func (m *memoryDB) CreateCard(card *cards.Card) error {
 	return nil
 }
 
-func (m *memoryDB) AllCards() []*cards.Card {
+// AllCards returns a list with all cards
+func (m *MemoryDB) AllCards() []*cards.Card {
 	return m.cardList
 }
 
-func (m *memoryDB) GetCard(id int64) (*cards.Card, error) {
+// GetCard retrieves a card
+func (m *MemoryDB) GetCard(id int64) (*cards.Card, error) {
 	for _, card := range m.cardList {
 		if card.ID == id {
 			return card, nil
@@ -32,7 +37,8 @@ func (m *memoryDB) GetCard(id int64) (*cards.Card, error) {
 	return nil, ErrCardNotFound
 }
 
-func (m *memoryDB) RemoveCard(id int64) error {
+// RemoveCard removes a card by id
+func (m *MemoryDB) RemoveCard(id int64) error {
 	m.index--
 	for index, card := range m.cardList {
 		if card.ID == id {
@@ -44,7 +50,8 @@ func (m *memoryDB) RemoveCard(id int64) error {
 
 }
 
-func (m *memoryDB) UpdateCard(new *cards.Card) (*cards.Card, error) {
+// UpdateCard updates a card with new values
+func (m *MemoryDB) UpdateCard(new *cards.Card) (*cards.Card, error) {
 	card, err := m.GetCard(new.ID)
 	if err != nil {
 		return nil, err

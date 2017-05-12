@@ -2,6 +2,7 @@ package database
 
 import (
 	"github.com/jmoiron/sqlx"
+	// register sqlite 3 driver
 	_ "github.com/mattn/go-sqlite3"
 )
 
