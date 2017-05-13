@@ -53,13 +53,13 @@ extern "C" {
 #endif
 
 
-extern GoInt Add(GoInt p0, GoInt p1);
+extern GoInt add(GoInt p0, GoInt p1);
 
-extern GoFloat64 Cosine(GoFloat64 p0);
+extern GoFloat64 cosine(GoFloat64 p0);
 
-extern void Sort(GoSlice p0);
+extern void sortints(GoSlice p0);
 
-extern GoInt Log(GoString p0);
+extern GoInt logmsg(GoString p0);
 
 #ifdef __cplusplus
 }

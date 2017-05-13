@@ -14,23 +14,23 @@ import "C"
 var count int
 var mtx sync.Mutex
 
-//export Add
-func Add(a, b int) int {
+//export add
+func add(a, b int) int {
 	return a + b
 }
 
-//export Cosine
-func Cosine(x float64) float64 {
+//export cosine
+func cosine(x float64) float64 {
 	return math.Cos(x)
 }
 
-//export Sort
-func Sort(vals []int) {
+//export sortints
+func sortints(vals []int) {
 	sort.Ints(vals)
 }
 
-//export Log
-func Log(msg string) int {
+//export logmsg
+func logmsg(msg string) int {
 	mtx.Lock()
 	defer mtx.Unlock()
 	fmt.Println(msg)
