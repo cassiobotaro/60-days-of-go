@@ -5,6 +5,7 @@ import (
 	"time"
 )
 
+// MagicNumber is only an arbitrary number
 const MagicNumber = 200
 
 // This example is a series of tests based on https://gobyexample.com/worker-pools

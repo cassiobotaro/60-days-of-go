@@ -44,7 +44,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println("\n\nTemplate from file\n")
+	fmt.Printf("\n\nTemplate from file\n")
 	// parse a file to create a template
 
 	t2, err := txt.ParseFiles("tmpl0.txt")

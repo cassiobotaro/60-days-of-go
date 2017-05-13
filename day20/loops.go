@@ -34,7 +34,6 @@ func main() {
 	for {
 		fmt.Println("loop")
 		break // get out of the loop
-		fmt.Println("Never executed")
 	}
 
 	// only even numbers

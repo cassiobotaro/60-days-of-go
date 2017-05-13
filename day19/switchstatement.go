@@ -19,7 +19,7 @@ func main() {
 		fallthrough
 
 	case 3:
-		fmt.Println("option 3\n")
+		fmt.Println("option 3")
 	}
 
 	// switch statement "if style"

@@ -5,28 +5,28 @@ import (
 	"sort"
 )
 
-type Person struct {
+type person struct {
 	Name string
 	Age  int
 }
 
-type ByNameLength []Person
+type byNameLength []person
 
 // Len is a method needed to implements Interface interface
 // represent the slice length
-func (s ByNameLength) Len() int {
+func (s byNameLength) Len() int {
 	return len(s)
 }
 
 // Swap is a method needed to implements Interface interface
 // how elements changes your position
-func (s ByNameLength) Swap(i, j int) {
+func (s byNameLength) Swap(i, j int) {
 	s[i], s[j] = s[j], s[i]
 }
 
 // Less is a method needed to implements Interface interface
 // compare method used in sort method
-func (s ByNameLength) Less(i, j int) bool {
+func (s byNameLength) Less(i, j int) bool {
 	return len(s[i].Name) < len(s[j].Name)
 }
 
@@ -68,13 +68,13 @@ func main() {
 		fmt.Printf("%d not found in %v\n", x, ints)
 	}
 
-	people := []Person{
+	people := []person{
 		{"Mari", 24},
 		{"Venilton", 60},
 		{"Cassio", 26},
 	}
 	// sorting persons by name length
-	sort.Sort(ByNameLength(people))
+	sort.Sort(byNameLength(people))
 	fmt.Println(people)
 	// Interesting links
 	// - https://gobyexample.com/sorting

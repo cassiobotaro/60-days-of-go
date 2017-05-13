@@ -21,8 +21,8 @@ import (
 // Ugly but for while is the solution
 var db = database.NewMemoryDB()
 
-// RenderJson render a content as json(thinking about middleware)
-func RenderJson(w http.ResponseWriter, content interface{}, statusCode int) {
+// RenderJSON render a content as json(thinking about middleware)
+func RenderJSON(w http.ResponseWriter, content interface{}, statusCode int) {
 	// Set Content-Type as json
 	w.Header().Set("Content-Type", "application/json; charset=utf-8")
 	// HTTP STATUS CODE
@@ -41,7 +41,7 @@ func createCard(w http.ResponseWriter, r *http.Request) {
 	defer r.Body.Close()
 	if err != nil {
 		// Status 422 - Unprocessable entity
-		RenderJson(w, map[string]string{"errors": err.Error()}, http.StatusUnprocessableEntity)
+		RenderJSON(w, map[string]string{"errors": err.Error()}, http.StatusUnprocessableEntity)
 		return
 	}
 	// if is a valid card
@@ -49,17 +49,17 @@ func createCard(w http.ResponseWriter, r *http.Request) {
 	if result {
 		// create card
 		db.CreateCard(&card)
-		RenderJson(w, card, http.StatusCreated)
+		RenderJSON(w, card, http.StatusCreated)
 	} else {
 		// STATUS 401 - BAD REQUEST
-		RenderJson(w, map[string]string{"errors": err.Error()}, http.StatusBadRequest)
+		RenderJSON(w, map[string]string{"errors": err.Error()}, http.StatusBadRequest)
 	}
 }
 
 func allCards(w http.ResponseWriter, r *http.Request) {
 	// list all cards
 	cardList := db.AllCards()
-	RenderJson(w, cardList, http.StatusOK)
+	RenderJSON(w, cardList, http.StatusOK)
 }
 
 func getCard(w http.ResponseWriter, r *http.Request) {
@@ -67,18 +67,18 @@ func getCard(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	id, err := strconv.ParseInt(vars["id"], 10, 64)
 	if err != nil {
-		RenderJson(w, err, http.StatusInternalServerError)
+		RenderJSON(w, err, http.StatusInternalServerError)
 		return
 	}
 	// get the card by id
 	card, err := db.GetCard(id)
 	switch err {
 	case database.ErrCardNotFound:
-		RenderJson(w, err, http.StatusNotFound)
+		RenderJSON(w, err, http.StatusNotFound)
 	case nil:
-		RenderJson(w, card, http.StatusOK)
+		RenderJSON(w, card, http.StatusOK)
 	default:
-		RenderJson(w, err, http.StatusInternalServerError)
+		RenderJSON(w, err, http.StatusInternalServerError)
 	}
 }
 
@@ -87,18 +87,18 @@ func deleteCard(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	id, err := strconv.ParseInt(vars["id"], 10, 64)
 	if err != nil {
-		RenderJson(w, err, http.StatusInternalServerError)
+		RenderJSON(w, err, http.StatusInternalServerError)
 		return
 	}
 	// try to delete the card from id
 	err = db.RemoveCard(id)
 	switch err {
 	case database.ErrCardNotFound:
-		RenderJson(w, err, http.StatusNotFound)
+		RenderJSON(w, err, http.StatusNotFound)
 	case nil:
-		RenderJson(w, "", http.StatusNoContent)
+		RenderJSON(w, "", http.StatusNoContent)
 	default:
-		RenderJson(w, err, http.StatusInternalServerError)
+		RenderJSON(w, err, http.StatusInternalServerError)
 	}
 }
 
@@ -107,14 +107,14 @@ func updateCard(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	id, err := strconv.ParseInt(vars["id"], 10, 64)
 	if err != nil {
-		RenderJson(w, err, http.StatusInternalServerError)
+		RenderJSON(w, err, http.StatusInternalServerError)
 		return
 	}
 	card := cards.Card{}
 	err = json.NewDecoder(r.Body).Decode(&card)
 	defer r.Body.Close()
 	if err != nil {
-		RenderJson(w, map[string]string{"errors": err.Error()}, http.StatusUnprocessableEntity)
+		RenderJSON(w, map[string]string{"errors": err.Error()}, http.StatusUnprocessableEntity)
 		return
 	}
 	result, err := valid.ValidateStruct(card)
@@ -124,15 +124,15 @@ func updateCard(w http.ResponseWriter, r *http.Request) {
 		updated, err := db.UpdateCard(&card)
 		switch err {
 		case database.ErrCardNotFound:
-			RenderJson(w, err, http.StatusNotFound)
+			RenderJSON(w, err, http.StatusNotFound)
 		case nil:
-			RenderJson(w, updated, http.StatusOK)
+			RenderJSON(w, updated, http.StatusOK)
 		default:
-			RenderJson(w, err, http.StatusInternalServerError)
+			RenderJSON(w, err, http.StatusInternalServerError)
 		}
 	} else {
 		// STATUS 401 - BAD REQUEST
-		RenderJson(w, map[string]string{"errors": err.Error()}, http.StatusBadRequest)
+		RenderJSON(w, map[string]string{"errors": err.Error()}, http.StatusBadRequest)
 	}
 }
 
@@ -141,25 +141,25 @@ func partialUpdateCard(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	id, err := strconv.ParseInt(vars["id"], 10, 64)
 	if err != nil {
-		RenderJson(w, err, http.StatusInternalServerError)
+		RenderJSON(w, err, http.StatusInternalServerError)
 		return
 	}
 	card := cards.Card{}
 	err = json.NewDecoder(r.Body).Decode(&card)
 	defer r.Body.Close()
 	if err != nil {
-		RenderJson(w, map[string]string{"errors": err.Error()}, http.StatusUnprocessableEntity)
+		RenderJSON(w, map[string]string{"errors": err.Error()}, http.StatusUnprocessableEntity)
 		return
 	}
 	card.ID = id
 	updated, err := db.UpdateCard(&card)
 	switch err {
 	case database.ErrCardNotFound:
-		RenderJson(w, err, http.StatusNotFound)
+		RenderJSON(w, err, http.StatusNotFound)
 	case nil:
-		RenderJson(w, updated, http.StatusOK)
+		RenderJSON(w, updated, http.StatusOK)
 	default:
-		RenderJson(w, err, http.StatusInternalServerError)
+		RenderJSON(w, err, http.StatusInternalServerError)
 	}
 }
 
@@ -175,7 +175,7 @@ func main() {
 	n := negroni.Classic() // Includes some default middlewares
 	n.UseHandler(r)
 
-	baseUrl := "localhost:3000"
-	log.Printf("Server running at: http://%s", baseUrl)
-	log.Fatal(http.ListenAndServe(baseUrl, n))
+	baseURL := "localhost:3000"
+	log.Printf("Server running at: http://%s", baseURL)
+	log.Fatal(http.ListenAndServe(baseURL, n))
 }

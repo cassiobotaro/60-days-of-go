@@ -17,12 +17,14 @@ func main() {
 	time.Sleep(1 * time.Minute)
 }
 
+// Read reads an element of the map
 func Read() {
 	for {
 		read()
 	}
 }
 
+// Write writes an element in the map
 func Write() {
 	for {
 		write()

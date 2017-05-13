@@ -9,6 +9,7 @@ import (
 	"strings"
 )
 
+// ReadCSV iterates over the records and print the content
 func ReadCSV(r *csv.Reader) {
 	// Ignore header
 	_, _ = r.Read()
@@ -21,6 +22,7 @@ func ReadCSV(r *csv.Reader) {
 	}
 }
 
+// ReadAllCSV iterates over the records and print the content
 func ReadAllCSV(r *csv.Reader) {
 	// read all records
 	records, err := r.ReadAll()
