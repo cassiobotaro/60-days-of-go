@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     // Yes, we have to use go types, because behind the scene, they are long long int
     GoInt a = 12;
     GoInt b = 99;
-    printf("awesome.add(12,99) = %lu\n", add(a,b));
+    printf("awesome.add(12,99) = %lld\n", add(a,b));
 
     // Call cosine() - passing GoFloat64(double) param- GoFloat64(double) returned
     // GoFloat64 - double
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     for (int i = 0; i < 6; ++i) {
         // each element in nums.data is a pointer to Goint but cast is necessary
         // then we catch the value to sort
-        printf("%lu,",*((GoInt *)nums.data + i));
+        printf("%lld,",*((GoInt *)nums.data + i));
     }
     printf("\n");
 
