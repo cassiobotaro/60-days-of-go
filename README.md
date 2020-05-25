@@ -1,5 +1,5 @@
 # 60 days of go
-:squirrel: 60 days discovering go
+:card_index_dividers: 60 days discovering go
 
 Heavily inspired by [Going.go](https://goinggo.io/) of my friend [@joaoh82](https://github.com/joaoh82).
 
